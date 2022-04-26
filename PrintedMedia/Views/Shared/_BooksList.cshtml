@@ -1,0 +1,13 @@
+﻿@model List<Book>
+
+<div class="row">
+    <div class="col-2">Title</div>
+    <div class="col-2">Author</div>
+    <div class="col-2">Year</div>
+    <div class="col-2">Publisher</div>
+</div>
+
+@foreach (Book book in Model)
+{
+    <partial name="_BookDetails2" model="book" />
+}

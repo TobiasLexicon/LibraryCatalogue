@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{12B1F3B1-4326-48AA-A039-7DA3D95A0CE9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PrintedMedia/Views/Shared/_BookDetails3.cshtml">
+    <Files>
+      <File FileName="PrintedMedia/Startup.cs" Line="20" Column="1" />
+      <File FileName="PrintedMedia/Views/Book/Index.cshtml" Line="21" Column="10" />
+      <File FileName="PrintedMedia/Views/Shared/_Layout.cshtml" Line="31" Column="109" />
+      <File FileName="PrintedMedia/Views/Shared/_BookDetails.cshtml" Line="7" Column="6" />
+      <File FileName="PrintedMedia/Views/Shared/_BookDetails2.cshtml" Line="9" Column="7" />
+      <File FileName="PrintedMedia/Views/Book/Ajax.cshtml" Line="8" Column="31" />
+      <File FileName="PrintedMedia/Controllers/BookController.cs" Line="28" Column="55" />
+      <File FileName="PrintedMedia/Views/Shared/_BooksList.cshtml" Line="9" Column="1" />
+      <File FileName="PrintedMedia/wwwroot/js/site.js" Line="16" Column="81" />
+      <File FileName="PrintedMedia/Models/BookService.cs" Line="58" Column="35" />
+      <File FileName="PrintedMedia/Models/Book.cs" Line="4" Column="1" />
+      <File FileName="PrintedMedia/Models/IBookService.cs" Line="9" Column="49" />
+      <File FileName="PrintedMedia/Models/BookViewModel.cs" Line="4" Column="31" />
+      <File FileName="PrintedMedia/Views/Book/BookViewModelDemo.cshtml" Line="35" Column="5" />
+      <File FileName="PrintedMedia/Views/Shared/_BookDetails3.cshtml" Line="7" Column="46" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LibraryCatalogue" expanded="True">
+            <Node name="PrintedMedia" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Book" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_BookDetails3.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PrintedMedia PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

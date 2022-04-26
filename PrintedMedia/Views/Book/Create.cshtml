@@ -1,0 +1,33 @@
+﻿@model CreateBookViewModel
+@{
+    ViewData["Title"] = "Books - Add new book";
+}
+
+<h1>Add new book</h1>
+
+<form asp-action="Create" method="post">
+    <label asp-for="Title"></label>
+    <input asp-for="Title" />
+    <span asp-validation-for="Title"></span>
+
+    <label asp-for="Author"></label>
+    <input asp-for="Author" />
+    <span asp-validation-for="Author"></span>
+
+    <label asp-for="Year"></label>
+    <input asp-for="Year" />
+    <span asp-validation-for="Year"></span>
+
+    <label asp-for="Publisher"></label>
+    <input asp-for="Publisher" list="publishersList" />
+    <span asp-validation-for="Publisher"></span>
+
+    <button type="submit">Create book</button>
+
+    <datalist id="publishersList">
+        @foreach (string publisher in Model.PublisherList)
+        {
+            <option value="@publisher">@publisher</option>
+        }
+    </datalist>
+</form>

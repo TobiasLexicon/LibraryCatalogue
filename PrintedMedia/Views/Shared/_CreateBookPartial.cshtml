@@ -1,7 +1,4 @@
 ﻿@model CreateBookViewModel
-@{
-    ViewData["Title"] = "Books - Add new book";
-}
 
 <h1>Add new book</h1>
 
@@ -25,13 +22,9 @@
     <button type="submit">Create book</button>
 
     <datalist id="publishersList">
-            <option value="Foo">Foo</option>        
+        @foreach (string publisher in Model.PublisherList)
+        {
+            <option value="@publisher">@publisher</option>
+        }
     </datalist>
 </form>
-
-@*<datalist id="publishersList">
-    @foreach (string publisher in Model.PublisherList)
-    {
-        <option value="@publisher">@publisher</option>
-    }
-</datalist>*@

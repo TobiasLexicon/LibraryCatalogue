@@ -11,5 +11,6 @@ namespace PrintedMedia.Models
         Book CreateBook(CreateBookViewModel createBook);
         Book GetById(int id);
         string GetReference(Book book);
+        List<Book> GetBooksByYear(int year);
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-namespace PrintedMedia.Models
+﻿namespace PrintedMedia.Models
 {
     public class BookViewModel
     {

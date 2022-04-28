@@ -1,8 +1,10 @@
 ﻿@model List<Book>
 
 
-<button onclick="getBook()">Get Books</button>
-<button onclick="getBookJSON()">Get Books (JSON-version)</button>
+<button onclick="getBook('@Url.Action("GetBooks", "Book")')">Get Books</button>
+<button onclick="getBookJSON('@Url.Action("GetBooksJSON", "Book")')">Get Books (JSON-version)</button>
+
+<input name="year" type="number" id="inputId"/>
+<button onclick="findThroughPost('@Url.Action("FindByYear", "Book")', 'inputId')">Search</button>
 
 <div id="BooksList"></div>
-<div id="BooksListJSON"></div>

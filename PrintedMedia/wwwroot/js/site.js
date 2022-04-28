@@ -3,16 +3,41 @@
 
 // Write your JavaScript code.
 
-function getBook() {
-    $.get("/Book/GetBooks", function (response) {
+$(document).ready(function () {
+    $.get("/Book/GetPublishers", function (response) {
+        console.log(response);
+        $('#publishersList').empty();
+        response.map(publisher =>
+            $('#publishersList').append($('<option/>', {
+                value: publisher,
+                text: publisher
+
+            })));
+    });
+});
+
+
+function getBook(url) {
+    $.get(url, function (response) {
         
         document.getElementById("BooksList").innerHTML = response;
     })
 }
 
-function getBookJSON() {
-    $.get("/Book/GetBooksJSON", function (response) {
+function getBookJSON(url) {
+    $.get(url, function (response) {
         console.log(response);
-        document.getElementById("BooksListJSON").innerHTML = response[0].Author;
+        document.getElementById("BooksList").innerHTML = response[0].author;
     })
 }
+
+function findThroughPost(url, inputId) {
+    let inputElement = $("#" + inputId);
+    var data = {
+        [inputElement.attr("name")]: inputElement.val()
+};
+    $.post(url, data, function (response) {
+        document.getElementById("BooksList").innerHTML = response;
+    })
+
+};

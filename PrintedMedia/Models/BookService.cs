@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PrintedMedia.Models
 {
@@ -25,7 +26,7 @@ namespace PrintedMedia.Models
                 bookStorage.Add(new Book() { Id = ++idCounter, Title = "Design Now", Author = "Adam Bassett", Year = 1983, Publisher="Wiley" });
                 bookStorage.Add(new Book() { Id = ++idCounter, Title = "Event-Driven Development", Author = "Jonathan Hudson", Year = 2019, Publisher = "Manning" });
                 bookStorage.Add(new Book() { Id = ++idCounter, Title = "Myths of management", Author = "Cristian Scott", Year = 2021, Publisher = "Sage" });
-                bookStorage.Add(new Book() { Id = ++idCounter, Title = "Easy Performance", Author = "Sara Hewison", Year = 2018, Publisher = "Harvard Business Press" });
+                bookStorage.Add(new Book() { Id = ++idCounter, Title = "Easy Performance", Author = "Sara Hewison", Year = 2019, Publisher = "Harvard Business Press" });
                 bookStorage.Add(new Book() { Id = ++idCounter, Title = "Continuous Breaks", Author = "Greg Murphy", Year = 2010, Publisher = "Manning" });
             }
         }
@@ -76,15 +77,18 @@ namespace PrintedMedia.Models
             return publishersStorage;
         }
 
-
-
-
         public string GetReference(Book book)
         {
             string[] namingSeparate = book.Author.Split(' ');
             string reversed = $"{namingSeparate[1]}, {namingSeparate[0]}";
             string reference = $"{reversed}. ({book.Year}).{book.Title}. City: {book.Publisher}";
             return reference;
+        }
+
+        public List<Book> GetBooksByYear(int year)
+        {
+            List<Book> booksByYear = bookStorage.Where(book => book.Year == year).ToList();
+            return booksByYear;
         }
     }
 }

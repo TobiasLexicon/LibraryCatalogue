@@ -28,6 +28,7 @@ namespace PrintedMedia.Controllers
             return View(_bookService.GetBookViewModels());
         }
 
+        
         public IActionResult Ajax()
         {
             return View();
@@ -52,6 +53,12 @@ namespace PrintedMedia.Controllers
             return View(createBook);
         }
 
+        [HttpGet]
+        public IActionResult GetPublishers()
+        {
+            return Json(_bookService.GetPublishers());
+        }
+
         [HttpPost]
         public IActionResult Create(CreateBookViewModel createBook)
         {
@@ -64,6 +71,12 @@ namespace PrintedMedia.Controllers
             createBook.PublisherList = _bookService.GetPublishers();
 
             return View(createBook);
+        }
+
+        [HttpPost]
+        public IActionResult FindByYear(int year)
+        {
+            return PartialView("_BooksList", _bookService.GetBooksByYear(year));
         }
     }
 }

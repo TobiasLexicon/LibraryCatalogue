@@ -15,16 +15,16 @@
     <input asp-for="Year" />
     <span asp-validation-for="Year"></span>
 
-    <label asp-for="Publisher"></label>
+    @*<label asp-for="Publisher"></label>
     <input asp-for="Publisher" list="publishersList" />
-    <span asp-validation-for="Publisher"></span>
+    <span asp-validation-for="Publisher"></span>*@
 
     <button type="submit">Create book</button>
 
-    <datalist id="publishersList">
+    @*<datalist id="publishersList">
         @foreach (string publisher in Model.PublisherList)
         {
             <option value="@publisher">@publisher</option>
         }
-    </datalist>
+    </datalist>*@
 </form>

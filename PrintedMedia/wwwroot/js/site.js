@@ -4,7 +4,7 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-    $.get("/Book/GetPublishers", function (response) {
+    $.get("/Publisher/GetPublishers", function (response) {
         console.log(response);
         $('#publishersList').empty();
         response.map(publisher =>

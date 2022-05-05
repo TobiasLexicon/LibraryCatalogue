@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PrintedMedia.Models;
+using PrintedMedia.Models.Services;
+using PrintedMedia.Models.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,11 +13,13 @@ namespace PrintedMedia.Controllers
 {
     public class BookController : Controller
     {
-        IBookService _bookService;
+        readonly IBookService _bookService;
+        private readonly IPublisherService _publisherService;
 
-        public BookController()
+        public BookController(IBookService bookService, IPublisherService publisherService)
         {
-            _bookService = new BookService();
+            _bookService = bookService;
+            _publisherService = publisherService;
         }
 
         public IActionResult Index()
@@ -48,16 +52,12 @@ namespace PrintedMedia.Controllers
         public IActionResult Create()
         {
             CreateBookViewModel createBook = new CreateBookViewModel();
-            createBook.PublisherList = _bookService.GetPublishers();
+            createBook.PublisherList = _publisherService.GetAll();
+                
 
             return View(createBook);
         }
 
-        [HttpGet]
-        public IActionResult GetPublishers()
-        {
-            return Json(_bookService.GetPublishers());
-        }
 
         [HttpPost]
         public IActionResult Create(CreateBookViewModel createBook)
@@ -68,7 +68,7 @@ namespace PrintedMedia.Controllers
                 return RedirectToAction("Index");
             }
 
-            createBook.PublisherList = _bookService.GetPublishers();
+            createBook.PublisherList = _publisherService.GetAll();
 
             return View(createBook);
         }

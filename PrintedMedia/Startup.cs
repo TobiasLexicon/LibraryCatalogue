@@ -5,9 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PrintedMedia.Models;
+using PrintedMedia.Models.Data;
+using PrintedMedia.Models.Repos;
+using PrintedMedia.Models.Services;
 
 namespace PrintedMedia
 {
@@ -24,6 +29,13 @@ namespace PrintedMedia
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped <IBookService, BookService>();
+            services.AddScoped<IBookRepo, BookRepo>();
+            services.AddScoped<IPublisherService, PublisherService>();
+
+            services.AddDbContext<LibraryDbContext>(options =>
+            options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

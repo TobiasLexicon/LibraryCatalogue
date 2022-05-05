@@ -26,8 +26,15 @@ using PrintedMedia.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/Views/_ViewImports.cshtml"
+using PrintedMedia.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0aa07997cef09066f0c784721652eef4b38cfb35", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6614b7ad1679007245958862838a06666a3d54f1", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3b919fd6f33e54fdd2f095674c5d89664d62dbf7", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

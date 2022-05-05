@@ -18,15 +18,15 @@
     <input asp-for="Year" />
     <span asp-validation-for="Year"></span>
 
-    <label asp-for="Publisher"></label>
+    @*<label asp-for="Publisher"></label>
     <input asp-for="Publisher" list="publishersList" />
-    <span asp-validation-for="Publisher"></span>
+    <span asp-validation-for="Publisher"></span>*@
 
     <button type="submit">Create book</button>
 
-    <datalist id="publishersList">
+    @*<datalist id="publishersList">
             <option value="Foo">Foo</option>        
-    </datalist>
+    </datalist>*@
 </form>
 
 @*<datalist id="publishersList">

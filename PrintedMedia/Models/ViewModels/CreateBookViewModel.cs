@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace PrintedMedia.Models
+namespace PrintedMedia.Models.ViewModels
 {
     public class CreateBookViewModel
     {
@@ -17,10 +17,10 @@ namespace PrintedMedia.Models
         [Required]
         [Range(1000, 2050)]
         public int Year { get; set; }
-        [Required]
-        [StringLength(255)]
-        public string Publisher { get; set; }
 
-        public List<string> PublisherList { get; set; }
+        [Required]
+        public int PublisherId { get; set; }
+
+        public List<Publisher> PublisherList { get; set; }
     }
 }

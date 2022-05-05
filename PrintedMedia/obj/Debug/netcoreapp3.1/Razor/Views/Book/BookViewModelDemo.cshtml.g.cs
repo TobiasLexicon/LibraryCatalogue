@@ -26,8 +26,15 @@ using PrintedMedia.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/Views/_ViewImports.cshtml"
+using PrintedMedia.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9df5db2301c489bcf82e22e11a54a303374cda33", @"/Views/Book/BookViewModelDemo.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6614b7ad1679007245958862838a06666a3d54f1", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3b919fd6f33e54fdd2f095674c5d89664d62dbf7", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Book_BookViewModelDemo : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<BookViewModel>>
     #nullable disable
@@ -75,7 +82,7 @@ using PrintedMedia.Models;
 #line hidden
 #nullable disable
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9df5db2301c489bcf82e22e11a54a303374cda334124", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9df5db2301c489bcf82e22e11a54a303374cda334322", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

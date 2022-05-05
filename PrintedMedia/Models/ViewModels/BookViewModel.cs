@@ -1,4 +1,5 @@
-﻿namespace PrintedMedia.Models
+﻿namespace PrintedMedia.Models.ViewModels
+
 {
     public class BookViewModel
     {

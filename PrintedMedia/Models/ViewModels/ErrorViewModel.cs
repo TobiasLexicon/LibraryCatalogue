@@ -1,5 +1,5 @@
 ﻿using System;
-namespace PrintedMedia.Models
+namespace PrintedMedia.Models.ViewModels
 {
     public class ErrorViewModel
     {

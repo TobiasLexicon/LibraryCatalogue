@@ -31,6 +31,7 @@ namespace PrintedMedia
             services.AddControllersWithViews();
             services.AddScoped <IBookService, BookService>();
             services.AddScoped<IBookRepo, BookRepo>();
+            services.AddScoped<IPublisherRepo, PublisherRepo>();
             services.AddScoped<IPublisherService, PublisherService>();
 
             services.AddDbContext<LibraryDbContext>(options =>

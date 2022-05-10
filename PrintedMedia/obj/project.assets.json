@@ -5397,7 +5397,7 @@
       "outputPath": "/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/tobiasengberg/.config/NuGet/NuGet.Config"
+        "/Users/tobiasengberg/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

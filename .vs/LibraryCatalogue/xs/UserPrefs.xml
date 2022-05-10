@@ -1,27 +1,11 @@
 ﻿<Properties StartupConfiguration="{12B1F3B1-4326-48AA-A039-7DA3D95A0CE9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PrintedMedia/Models/Services/PublisherService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PrintedMedia/Models/Publisher.cs">
     <Files>
-      <File FileName="PrintedMedia/Models/Data/LibraryDbContext.cs" Line="1" Column="1" />
-      <File FileName="PrintedMedia/Models/Publisher.cs" />
-      <File FileName="PrintedMedia/Models/Services/IBookService.cs" Line="10" Column="49" />
-      <File FileName="PrintedMedia/Controllers/BookController.cs" Line="60" Column="1" />
-      <File FileName="PrintedMedia/Models/Book.cs" />
-      <File FileName="PrintedMedia/Controllers/HomeController.cs" Line="39" Column="1" />
-      <File FileName="PrintedMedia/Models/ViewModels/CreatePublisherViewModel.cs" />
-      <File FileName="PrintedMedia/Models/Services/IPublisherService.cs" Line="14" Column="42" />
-      <File FileName="PrintedMedia/Models/ViewModels/CreateBookViewModel.cs" Line="24" Column="30" />
-      <File FileName="PrintedMedia/Views/_ViewImports.cshtml" Line="4" Column="1" />
-      <File FileName="PrintedMedia/Views/Shared/_CreateBookPartial.cshtml" Line="30" Column="8" />
-      <File FileName="PrintedMedia/Views/Shared/_Layout.cshtml" Line="38" Column="30" />
-      <File FileName="PrintedMedia/Models/Repos/IBookRepo.cs" Line="15" Column="13" />
-      <File FileName="PrintedMedia/Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="PrintedMedia/Views/Book/Index.cshtml" Line="1" Column="18" />
-      <File FileName="PrintedMedia/Models/Repos/BookRepo.cs" Line="49" Column="10" />
-      <File FileName="PrintedMedia/Startup.cs" Line="33" Column="55" />
-      <File FileName="PrintedMedia/Models/Services/BookService.cs" Line="15" Column="21" />
-      <File FileName="PrintedMedia/Controllers/PublisherController.cs" Line="49" Column="53" />
-      <File FileName="PrintedMedia/wwwroot/js/site.js" Line="7" Column="36" />
-      <File FileName="PrintedMedia/Models/Services/PublisherService.cs" Line="35" Column="2" />
+      <File FileName="PrintedMedia/Models/Book.cs" Line="1" Column="1" />
+      <File FileName="PrintedMedia/Models/Repos/PublisherRepo.cs" Line="19" Column="48" />
+      <File FileName="PrintedMedia/Startup.cs" Line="1" Column="1" />
+      <File FileName="PrintedMedia/Models/Repos/BookRepo.cs" Line="1" Column="1" />
+      <File FileName="PrintedMedia/Models/Publisher.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -35,10 +19,9 @@
               <Node name="Models" expanded="True">
                 <Node name="Data" expanded="True" />
                 <Node name="Repos" expanded="True" />
-                <Node name="Services" expanded="True">
-                  <Node name="PublisherService.cs" selected="True" />
-                </Node>
+                <Node name="Services" expanded="True" />
                 <Node name="ViewModels" expanded="True" />
+                <Node name="Publisher.cs" selected="True" />
               </Node>
               <Node name="Views" expanded="True">
                 <Node name="Book" expanded="True" />

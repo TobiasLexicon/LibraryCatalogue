@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using PrintedMedia.Models.Repos;
 using PrintedMedia.Models.ViewModels;
 
 namespace PrintedMedia.Models.Services
 {
     public class PublisherService : IPublisherService
     {
+        private readonly IPublisherRepo _publisherRepo;
+
+        public PublisherService(IPublisherRepo publisherRepo)
+        {
+            _publisherRepo = publisherRepo;
+        }
 
         public Publisher Create(CreatePublisherViewModel createPublisherViewModel)
         {

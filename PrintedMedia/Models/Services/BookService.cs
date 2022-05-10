@@ -85,7 +85,10 @@ namespace PrintedMedia.Models.Services
 
         public List<Book> GetBooksByYear(int year)
         {
-            List<Book> booksByYear = _bookRepo.Read().Where(book => book.Year == year).ToList();
+            List<Book> booksByYear = _bookRepo
+                .Read()
+                .Where(book => book.Year == year)
+                .ToList();
             return booksByYear;
         }
     }

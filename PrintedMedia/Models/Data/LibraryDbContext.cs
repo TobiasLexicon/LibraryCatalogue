@@ -10,6 +10,8 @@ namespace PrintedMedia.Models.Data
         }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Publisher> Publishers { get; set; }
+
     }
 }
     

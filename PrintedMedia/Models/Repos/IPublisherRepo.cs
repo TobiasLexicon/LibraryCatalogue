@@ -7,8 +7,8 @@ namespace PrintedMedia.Models.Repos
     {
         List<Publisher> Read();
         Publisher ReadById(int id);
-        Publisher Add(Publisher publisher);
-        Publisher Update(Publisher publisher);
+        Publisher Create(Publisher publisher);
+        bool Update(Publisher publisher);
         bool Delete(Publisher publisher);
     }
 }

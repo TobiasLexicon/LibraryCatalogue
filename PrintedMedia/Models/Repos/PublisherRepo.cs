@@ -15,33 +15,35 @@ namespace PrintedMedia.Models.Repos
             _libraryDbContext = libraryDbContext;
         }
 
-        public Publisher Add(Publisher publisher)
+        public Publisher Create(Publisher publisher)
         {
-            
-
-            throw new NotImplementedException();
+            _libraryDbContext.Publishers.Add(publisher);
+            _libraryDbContext.SaveChanges();
+            return publisher;
         }
 
         public bool Delete(Publisher publisher)
         {
-            throw new NotImplementedException();
+            _libraryDbContext.Publishers.Remove(publisher);
+            return (_libraryDbContext.SaveChanges() > 0);
         }
 
         public List<Publisher> Read()
         {
-            return _libraryDbContext.Publishers
-                .Where(publ => publ.Name == "Wiley")
+            return _libraryDbContext.Publishers               
                 .ToList();
         }
 
         public Publisher ReadById(int id)
         {
-            throw new NotImplementedException();
+            return _libraryDbContext.Publishers
+                .SingleOrDefault(publisher => publisher.Id == id);
         }
 
-        public Publisher Update(Publisher publisher)
+        public bool Update(Publisher publisher)
         {
-            throw new NotImplementedException();
+            _libraryDbContext.Publishers.Update(publisher);
+            return (_libraryDbContext.SaveChanges() > 0);
         }
     }
 }

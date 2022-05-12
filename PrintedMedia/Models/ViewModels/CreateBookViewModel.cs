@@ -11,8 +11,8 @@ namespace PrintedMedia.Models.ViewModels
         public string Title { get; set; }
 
         [Required]
-        [StringLength(255)]
-        public string Author { get; set; }
+        
+        public int AuthorId { get; set; }
 
         [Required]
         [Range(1000, 2050)]

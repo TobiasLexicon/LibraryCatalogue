@@ -4,11 +4,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PrintedMedia.Models
 {
-    public class Publisher
+    public class Author
     {
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<Book> Books { get; set; }
+        public int YearBorn { get; set; }
+        public List<AuthorBook> BooksAuthored { get; set; }
     }
 }

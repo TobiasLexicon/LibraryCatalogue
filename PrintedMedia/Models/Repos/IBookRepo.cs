@@ -12,7 +12,7 @@ namespace PrintedMedia.Models.Repos
 
         Book ReadById(int id);
 
-        Book Update(Book book);
+        bool Update(Book book);
 
         bool Delete(Book book);
 

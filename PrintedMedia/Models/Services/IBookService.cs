@@ -10,7 +10,7 @@ namespace PrintedMedia.Models.Services
         List<BookViewModel> GetBookViewModels();
         Book CreateBook(CreateBookViewModel createBook);
         Book GetById(int id);
-        string GetReference(Book book);
+        //string GetReference(Book book);
         List<Book> GetBooksByYear(int year);
     }
 }

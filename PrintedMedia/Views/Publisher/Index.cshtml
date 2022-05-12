@@ -1,0 +1,40 @@
+﻿@model List<Publisher>
+@{
+    ViewData["Title"] = "Publisher - Index";
+}
+
+
+<h1>Publisher Index</h1>
+
+<a asp-action="Create">Add a new publisher</a>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Publisher</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Publisher publisher in Model)
+        {
+            <partial name="_BookDetails" model="publisher" />
+
+        }
+    </tbody>
+</table>
+
+
+
+<div class="row">
+    <div class="col-2">Name</div>
+    <div class="col-2">Author</div>
+    <div class="col-2">Year</div>
+    <div class="col-2">Publisher</div>
+</div>
+@foreach (Publisher publisher in Model)
+{
+    <partial name="_BookDetails2" model="publisher" />
+}

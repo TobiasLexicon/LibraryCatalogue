@@ -1,9 +1,11 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace PrintedMedia.Models.Data
 {
-    public class LibraryDbContext : DbContext
+    public class LibraryDbContext : IdentityDbContext<LibraryUser>
     {
         public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options)
         {
@@ -13,6 +15,7 @@ namespace PrintedMedia.Models.Data
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<AuthorBook> AuthorBooks { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -64,8 +67,8 @@ namespace PrintedMedia.Models.Data
 
             modelBuilder.Entity<AuthorBook>().HasData(
                 new AuthorBook() { AuthorId = 1, BookId = 3 },
-                new AuthorBook() { AuthorId = 1, BookId = 4 },
-                new AuthorBook() { AuthorId = 1, BookId = 6 }
+                new AuthorBook() { AuthorId = 1, BookId = 4 }
+                
                 );
         }
 

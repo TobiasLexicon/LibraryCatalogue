@@ -15,7 +15,7 @@ namespace PrintedMedia.Models
         public int Year { get; set; }
 
         [ForeignKey("Publisher")]
-        public int PublisherId { get; set; }
+        public int? PublisherId { get; set; }
         public Publisher Publisher { get; set; }
     }
 }

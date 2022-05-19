@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PrintedMedia.Models.Services;
 using PrintedMedia.Models.ViewModels;
@@ -10,6 +11,7 @@ using PrintedMedia.Models.ViewModels;
 
 namespace PrintedMedia.Controllers
 {
+    [Authorize(Roles="Admin")]
     public class PublisherController : Controller
     {
         private readonly IPublisherService _publisherService;
@@ -19,28 +21,42 @@ namespace PrintedMedia.Controllers
             _publisherService = publisherService;
         }
 
-        // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            return View(_publisherService.GetAll());
         }
 
         public IActionResult Create()
         {
-         
+            
             return View();
         }
 
         [HttpPost]
         public IActionResult Create(CreatePublisherViewModel createPublisherViewModel)
         {
-            _publisherService.Create(createPublisherViewModel);
+            if (ModelState.IsValid)
+            {
+                _publisherService.Create(createPublisherViewModel);
+                return RedirectToAction("Index");
+            }
             return View();
         }
 
         public IActionResult GetPublisher(int id)
         {
             return PartialView();
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            if (_publisherService.Delete(id))
+            {
+                return RedirectToAction("Index");
+            }
+            ViewBag.Message = "Unable to delete post";
+            return View("Index", _publisherService.GetAll());
         }
 
         [HttpGet]

@@ -11,6 +11,6 @@ namespace PrintedMedia.Models.Services
         Publisher GetById(int id);
         Publisher Create(CreatePublisherViewModel createPublisherViewModel);
         Publisher Edit(int id, CreatePublisherViewModel createPublisherViewModel);
-        bool Delete(Publisher publisher);
+        bool Delete(int id);
     }
 }

@@ -12,14 +12,17 @@ using PrintedMedia.Models.ViewModels;
 
 namespace PrintedMedia.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     public class AccountController : Controller
     {
         private readonly UserManager<LibraryUser> _userManager;
+        private readonly SignInManager<LibraryUser> _signInManager;
 
-        public AccountController(UserManager<LibraryUser> userManager)
+        public AccountController(UserManager<LibraryUser> userManager,
+            SignInManager<LibraryUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         [AllowAnonymous]
@@ -64,6 +67,16 @@ namespace PrintedMedia.Controllers
         {
             return View();
         }
+
+        [AllowAnonymous]
+        [HttpPost]
+        async public Task<IActionResult> Login(string userName, string password)
+        {
+            Microsoft.AspNetCore.Identity.SignInResult result =
+                await _signInManager.PasswordSignInAsync(userName, password, true, false);
+            return View();
+        }
+
 
 
     }

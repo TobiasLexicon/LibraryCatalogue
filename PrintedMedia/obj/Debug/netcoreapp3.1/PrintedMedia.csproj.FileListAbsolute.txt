@@ -146,12 +146,19 @@
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/PrintedMedia.TagHelpers.input.cache
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/PrintedMedia.TagHelpers.output.cache
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/PrintedMedia.RazorCoreGenerate.cache
+/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Account/CreateUser.cshtml.g.cs
+/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Account/Index.cshtml.g.cs
+/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs
+/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Author/Create.cshtml.g.cs
+/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Author/Edit.cshtml.g.cs
+/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Author/Index.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Book/Ajax.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Book/BookViewModelDemo.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Book/Create.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Book/Index.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Publisher/Create.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Publisher/Index.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_BookDetails.cshtml.g.cs
@@ -171,5 +178,3 @@
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/PrintedMedia.dll
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/PrintedMedia.pdb
 /Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/PrintedMedia.genruntimeconfig.cache
-/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/PrintedMedia.csproj.AssemblyReference.cache
-/Users/tobiasengberg/Projects/LibraryCatalogue/PrintedMedia/obj/Debug/netcoreapp3.1/Razor/Views/Account/CreateUser.cshtml.g.cs

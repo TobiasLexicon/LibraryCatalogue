@@ -10,12 +10,10 @@ namespace PrintedMedia.Models.Services
     {
         private readonly IPublisherService _publisherService;
         private readonly IBookRepo _bookRepo;
+        private readonly IAuthorRepo _authorRepo;
 
-        //static int idCounter = 0;
-        //static List<Book> bookStorage = new List<Book>();
-        //static List<string> publishersStorage = new List<string>();
-
-        public BookService(IPublisherService publisherService, IBookRepo bookRepo)
+        public BookService(IPublisherService publisherService,
+            IBookRepo bookRepo)
         {
             _publisherService = publisherService;
             _bookRepo = bookRepo;
@@ -25,8 +23,7 @@ namespace PrintedMedia.Models.Services
         public Book CreateBook(CreateBookViewModel createBook)
         {
             Book book = new Book() {
-                Title = createBook.Title,
-                
+                Title = createBook.Title,               
                 Year = createBook.Year,
                 Publisher = _publisherService.GetById(createBook.PublisherId) };
             Book createdBook = _bookRepo.Create(book);
@@ -48,7 +45,7 @@ namespace PrintedMedia.Models.Services
                 BookViewModel bookViewModel = new BookViewModel();
                 bookViewModel.Title = book.Title;
                 foreach(AuthorBook authorBooks in book.Authors)
-                {
+                {                
                     bookViewModel.Authors.Add(authorBooks.Author);
                 }
 

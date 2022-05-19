@@ -1,16 +1,32 @@
 ﻿<Properties StartupConfiguration="{12B1F3B1-4326-48AA-A039-7DA3D95A0CE9}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="PrintedMedia/Controllers/AccountController.cs">
     <Files>
-      <File FileName="PrintedMedia/Models/Data/LibraryDbContext.cs" Line="70" Column="62" />
-      <File FileName="PrintedMedia/Models/LibraryUser.cs" Line="10" Column="1" />
-      <File FileName="PrintedMedia/Startup.cs" Line="64" Column="37" />
-      <File FileName="PrintedMedia/Models/Publisher.cs" Line="1" Column="1" />
-      <File FileName="PrintedMedia/Models/Book.cs" Line="22" Column="1" />
-      <File FileName="PrintedMedia/Controllers/AccountController.cs" Line="63" Column="21" />
-      <File FileName="PrintedMedia/Models/ViewModels/CreateUserViewModel.cs" Line="8" Column="19" />
-      <File FileName="PrintedMedia/Views/Account/CreateUser.cshtml" Line="40" Column="46" />
-      <File FileName="PrintedMedia/Views/Shared/_Layout.cshtml" Line="42" Column="26" />
-      <File FileName="PrintedMedia/Models/Services/PublisherService.cs" Line="38" Column="10" />
+      <File FileName="PrintedMedia/Models/Services/IAuthorBookService.cs" Line="10" Column="70" />
+      <File FileName="PrintedMedia/Models/Services/AuthorBookService.cs" Line="50" Column="1" />
+      <File FileName="PrintedMedia/Models/Services/AuthorService.cs" Line="43" Column="1" />
+      <File FileName="PrintedMedia/Models/Services/IAuthorService.cs" />
+      <File FileName="PrintedMedia/Models/ViewModels/CreateAuthorBookViewModel.cs" />
+      <File FileName="PrintedMedia/Models/AuthorBook.cs" Line="13" Column="1" />
+      <File FileName="PrintedMedia/Controllers/AuthorBookController.cs" Line="20" Column="1" />
+      <File FileName="PrintedMedia/Controllers/AuthorController.cs" Line="15" Column="33" />
+      <File FileName="PrintedMedia/Views/Author/Index.cshtml" Line="1" Column="1" />
+      <File FileName="PrintedMedia/Views/Author/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="PrintedMedia/Models/Repos/AuthorBookRepo.cs" Line="38" Column="39" />
+      <File FileName="PrintedMedia/Models/Services/BookService.cs" Line="30" Column="13" />
+      <File FileName="PrintedMedia/Models/Book.cs" Line="10" Column="2" />
+      <File FileName="PrintedMedia/Models/Repos/BookRepo.cs" Line="35" Column="17" />
+      <File FileName="PrintedMedia/Models/Data/LibraryDbContext.cs" Line="21" Column="1" />
+      <File FileName="PrintedMedia/Models/Author.cs" Line="18" Column="27" />
+      <File FileName="PrintedMedia/Models/Repos/AuthorRepo.cs" Line="42" Column="46" />
+      <File FileName="PrintedMedia/Models/LibraryUser.cs" Line="11" Column="1" />
+      <File FileName="PrintedMedia/Controllers/BookController.cs" Line="15" Column="5" />
+      <File FileName="PrintedMedia/Controllers/PublisherController.cs" Line="14" Column="5" />
+      <File FileName="PrintedMedia/Startup.cs" Line="1" Column="1" />
+      <File FileName="PrintedMedia/Controllers/AccountController.cs" Line="77" Column="27" />
+      <File FileName="PrintedMedia/Views/Account/Login.cshtml" Line="5" Column="1" />
+      <File FileName="PrintedMedia/Views/Account/Index.cshtml" Line="1" Column="1" />
+      <File FileName="PrintedMedia/Views/Account/CreateUser.cshtml" Line="43" Column="7" />
+      <File FileName="PrintedMedia/Views/Shared/_Layout.cshtml" Line="45" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,6 +45,9 @@
               </Node>
               <Node name="Views" expanded="True">
                 <Node name="Account" expanded="True" />
+                <Node name="Author" expanded="True" />
+                <Node name="Book" expanded="True" />
+                <Node name="Publisher" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">

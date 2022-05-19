@@ -9,7 +9,7 @@ using PrintedMedia.Models.Data;
 namespace PrintedMedia.Migrations
 {
     [DbContext(typeof(LibraryDbContext))]
-    [Migration("20220517084933_initialCreate")]
+    [Migration("20220519082857_initialCreate")]
     partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -157,6 +157,9 @@ namespace PrintedMedia.Migrations
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("YearBorn")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("YearDied")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

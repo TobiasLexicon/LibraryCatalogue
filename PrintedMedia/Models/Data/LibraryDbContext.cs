@@ -70,6 +70,43 @@ namespace PrintedMedia.Models.Data
                 new AuthorBook() { AuthorId = 1, BookId = 4 }
                 
                 );
+
+            string AdminId = Guid.NewGuid().ToString();
+            string AdminRoleId = Guid.NewGuid().ToString();
+            string UserRoleId = Guid.NewGuid().ToString();
+
+            modelBuilder.Entity<LibraryUser>().HasData(new LibraryUser
+            {
+                Id = AdminId,
+                UserName = "Admin",
+                Email = "admin@gmail.com",
+                PasswordHash = new PasswordHasher<LibraryUser>().HashPassword(null, "Qwer€321"),
+                FirstName = "Bob",
+                LastName = "Hope",
+                EmailConfirmed = true,
+                DateOfBirth = DateTime.Now
+            });
+
+            modelBuilder.Entity<LibraryUser>().HasData(
+                new IdentityRole
+            {
+                Id = AdminRoleId,
+                Name = "Admin"
+            },
+            new IdentityRole
+            {
+                Id = UserRoleId,
+                Name = "User"
+            });
+
+            modelBuilder.Entity<LibraryUser>().HasData(
+                new IdentityUserRole<string>
+                {
+                    UserId = AdminId,
+                    RoleId = AdminRoleId
+                });
+
+
         }
 
     }

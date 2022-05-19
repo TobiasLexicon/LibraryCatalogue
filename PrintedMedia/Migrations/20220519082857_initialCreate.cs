@@ -56,7 +56,8 @@ namespace PrintedMedia.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
-                    YearBorn = table.Column<int>(nullable: false)
+                    YearBorn = table.Column<int>(nullable: false),
+                    YearDied = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -229,13 +230,13 @@ namespace PrintedMedia.Migrations
 
             migrationBuilder.InsertData(
                 table: "Authors",
-                columns: new[] { "Id", "Name", "YearBorn" },
+                columns: new[] { "Id", "Name", "YearBorn", "YearDied" },
                 values: new object[,]
                 {
-                    { 1, "Kurt Weill", 1900 },
-                    { 2, "Gillian Flynn", 1971 },
-                    { 3, "Donald Reinertsen", 1950 },
-                    { 4, "Yuri Lotman", 1922 }
+                    { 1, "Kurt Weill", 1900, null },
+                    { 2, "Gillian Flynn", 1971, null },
+                    { 3, "Donald Reinertsen", 1950, null },
+                    { 4, "Yuri Lotman", 1922, null }
                 });
 
             migrationBuilder.InsertData(

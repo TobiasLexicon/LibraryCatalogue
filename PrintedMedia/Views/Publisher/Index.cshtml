@@ -1,40 +1,47 @@
-﻿@model List<Publisher>
+@model IEnumerable<PrintedMedia.Models.Publisher>
+
 @{
-    ViewData["Title"] = "Publisher - Index";
+    ViewData["Title"] = "Index";
 }
 
+<h1>Index</h1>
 
-<h1>Publisher Index</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if(ViewBag.Message != null)
+            {
+                <h2>@ViewBag.Message</h2>
+            }
 
-<a asp-action="Create">Add a new publisher</a>
-
-<table class="table table-hover">
+<table class="table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Author</th>
-            <th>Year</th>
-            <th>Publisher</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (Publisher publisher in Model)
-        {
-            <partial name="_BookDetails" model="publisher" />
-
-        }
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                <form method="post" asp-controller="Publisher" asp-action="Delete" asp-route-id=@item.Id >
+                <input type="submit" value="Delete" class="btn btn-link"/></form>
+            </td>
+        </tr>
+}
     </tbody>
 </table>
-
-
-
-<div class="row">
-    <div class="col-2">Name</div>
-    <div class="col-2">Author</div>
-    <div class="col-2">Year</div>
-    <div class="col-2">Publisher</div>
-</div>
-@foreach (Publisher publisher in Model)
-{
-    <partial name="_BookDetails2" model="publisher" />
-}

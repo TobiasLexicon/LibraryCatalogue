@@ -157,6 +157,9 @@ namespace PrintedMedia.Migrations
                     b.Property<int>("YearBorn")
                         .HasColumnType("int");
 
+                    b.Property<int?>("YearDied")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
@@ -349,6 +352,24 @@ namespace PrintedMedia.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "733e10a2-0d56-4272-9e0f-032b301ba0e0",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "3b5c5926-66f8-403f-a197-8c2d6cfe5c38",
+                            Email = "admin@gmail.com",
+                            EmailConfirmed = true,
+                            FirstName = "Bob",
+                            LastName = "Hope",
+                            LockoutEnabled = false,
+                            PasswordHash = "AQAAAAEAACcQAAAAEOY7RFcOPNCSdA5F+60yQ8BvSS+DKag05iEN76uXEvMdNsCDzr+1rB6HVJXYzRuLUw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "23aca608-866d-4ad5-9624-c005d709af32",
+                            TwoFactorEnabled = false,
+                            UserName = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("PrintedMedia.Models.Publisher", b =>

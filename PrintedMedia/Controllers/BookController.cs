@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PrintedMedia.Models;
 using PrintedMedia.Models.Services;
@@ -11,6 +12,7 @@ using PrintedMedia.Models.ViewModels;
 
 namespace PrintedMedia.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class BookController : Controller
     {
         readonly IBookService _bookService;
@@ -22,32 +24,37 @@ namespace PrintedMedia.Controllers
             _publisherService = publisherService;
         }
 
+        [Authorize(Roles = "Admin, User")]
         public IActionResult Index()
         {
             return View(_bookService.GetBooks());
         }
 
+        [Authorize(Roles = "Admin, User")]
         public IActionResult BookViewModelDemo()
         {
             return View(_bookService.GetBookViewModels());
         }
 
-        
+        [Authorize(Roles = "Admin, User")]
         public IActionResult Ajax()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin, User")]
         public IActionResult GetBooks()
         {
             return PartialView("_BooksList", _bookService.GetBooks());
         }
 
+        [Authorize(Roles = "Admin, User")]
         public IActionResult GetBooksJSON()
         {
             return Json(_bookService.GetBooks());
         }
 
+        [Authorize(Roles = "Admin, User")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -58,7 +65,7 @@ namespace PrintedMedia.Controllers
             return View(createBook);
         }
 
-
+        [Authorize(Roles = "Admin, User")]
         [HttpPost]
         public IActionResult Create(CreateBookViewModel createBook)
         {
@@ -72,6 +79,7 @@ namespace PrintedMedia.Controllers
 
             return View(createBook);
         }
+
 
         [HttpPost]
         public IActionResult FindByYear(int year)

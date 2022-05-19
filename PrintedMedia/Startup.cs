@@ -34,6 +34,8 @@ namespace PrintedMedia
             services.AddScoped<IBookRepo, BookRepo>();
             services.AddScoped<IPublisherRepo, PublisherRepo>();
             services.AddScoped<IPublisherService, PublisherService>();
+            services.AddScoped<IAuthorService, AuthorService>();
+            services.AddScoped<IAuthorRepo, AuthorRepo>();
 
             services.AddDbContext<LibraryDbContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
